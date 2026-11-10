@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a172b">
+<meta name="description" content="Attending Rounds: progressive, case-based clinical reasoning practice across nine medical specialties.">
+<title>Attending Rounds · Clinical Study Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><span>+</span></div>
+      <div><div class="brand-name">ATTENDING<span>ROUNDS</span></div><div class="brand-sub">Clinical reasoning lab</div></div>
+    </div>
+    <div class="sidebar-label">WORKSPACE</div>
+    <nav class="nav-menu">
+      <button class="nav-item selected" data-nav="home"><span class="nav-symbol">▦</span> Overview</button>
+      <button class="nav-item" data-nav="library"><span class="nav-symbol">▤</span> Case Library <span class="nav-count" id="nav-count">108</span></button>
+      <button class="nav-item" data-nav="progress"><span class="nav-symbol">◈</span> My Progress</button>
+      <button class="nav-item" data-nav="builder"><span class="nav-symbol">＋</span> Add Cases</button>
+      <button class="nav-item" data-nav="settings"><span class="nav-symbol">⚙</span> Settings</button>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-note">
+      <div class="note-kicker">ON-DEVICE LEARNING</div>
+      <div class="note-body">Your practice history stays in this browser. Export a backup to move between devices.</div>
+      <button id="sidebar-export" class="note-action" type="button">Export study backup ↗</button>
+    </div>
+    <div class="sidebar-foot">Educational simulation · not patient care guidance</div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div class="mobile-brand"><strong>✚ Attending Rounds</strong></div>
+      <div class="breadcrumbs" id="breadcrumbs">Clinical study dashboard <span>/</span> Overview</div>
+      <div class="top-actions">
+        <span class="status-dot"></span><span class="status-label">Offline ready</span>
+        <button class="icon-button" title="Show help" aria-label="Help" data-action="help">?</button>
+      </div>
+    </header>
+    <main id="app" tabindex="-1"></main>
+    <footer class="main-foot">Source-linked teaching cases where available · Verify current protocols and clinical guidance before patient care.</footer>
+  </div>
+</div>
+<div id="toast" aria-live="polite" role="status"></div>
+<script src="cases.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
